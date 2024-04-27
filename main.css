@@ -1,16 +1,5 @@
 /********************* UNIVERSAL *********************/
 
-
-@font-face {
-    font-family: 'hana';
-    src: url(./fonts/B2Hana-Regular.woff2);
-}
-
-@font-face {
-    font-family: 'uncut';
-    src: url(./fonts/UncutSans-Regular.woff2);
-}
-
 @font-face {
     font-family: 'GT America';
     src:
@@ -27,7 +16,7 @@
     padding: 0;
     box-sizing: border-box;
     /* font-family: "GT America", sans-serif;     */
-    font-family: "griffith-gothic-condensed", sans-serif;
+    font-family: "griffith-gothic", sans-serif;
     transition: all 100ms ease;
 
 
@@ -61,29 +50,27 @@ h3 {
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: 0.01em;
-    margin-bottom: 0.2em;
 }
 
 p {
-    /* font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: 0.02em; */
-    font-size: 2rem;
-    font-weight: 500;
+    font-family: "griffith-gothic", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
     line-height: 1.4;
     letter-spacing: 0.01em;
 }
 
 figcaption {
-    font-size: 1.2rem;
+    font-family: "griffith-gothic", sans-serif;
+    font-size: 1rem;
     color: var(--grey);
 }
 
 .tag {
     text-transform: uppercase;
     /* margin: auto 10px; */
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
     color: inherit;
     border: 1.5px solid var(--fg-color);
     display: inline-flex;
@@ -96,6 +83,7 @@ figcaption {
 }
 
 a {
+    font-family: inherit;
     text-decoration: underline;
     color: var(--fg-color);
 }
@@ -109,20 +97,17 @@ a:focus {
 
 .list {
     display: block;
-    /* list-style: disc;
-    padding-left: 1rem; */
-    /* list-style-position: inside; */
-
 }
 
-/* section > a {
-    text-decoration: underline;
-} */
+.project-annotation {
+    font-size: 2rem;
+}
+
+
 
 
 /********************* SPACING *********************/
 .tags {
-    margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -208,16 +193,13 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 1rem;
-    padding: 0 2rem 2rem;
+    padding: 0 2rem 4rem;
     background-color: var(--bg-color);
 }
 
 #selected-works {
     gap: 4rem 1rem;
 
-    a {
-        margin-bottom: 1rem;
-    }
 }
 
 section:first-child {
@@ -254,8 +236,9 @@ section:first-child {
     width: 100%;
     position: relative;
     margin: 0;
+    margin-bottom: 0.5rem;
     padding: 0;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 
@@ -264,7 +247,7 @@ section:first-child {
     aspect-ratio: 3/2;
     width: 100%;
     object-fit: cover;
-    
+
 }
 
 .overlay {
@@ -301,9 +284,6 @@ section:first-child {
     display: flex;
     gap: 2rem;
 
-    p {
-        font-size: 1.5rem;
-    }
 }
 
 .info-section {
@@ -351,7 +331,7 @@ section:first-child {
     width: 100%;
     margin-bottom: 3rem;
 
-    img,        
+    img,
     video {
         width: 100%;
     }
@@ -362,12 +342,13 @@ section:first-child {
     margin-bottom: 0.2rem;
     position: relative;
 
-    img, video  {
+    img,
+    video {
         width: 100%;
     }
 }
 
-#archive figure > a {
+#archive figure>a {
     text-decoration: none;
 }
 
@@ -395,6 +376,8 @@ section:first-child {
 .thumbnail {
     width: 100vw;
     height: calc(100vh - 4em);
+    object-fit: cover;
+
 }
 
 .thumbnail>* {
@@ -459,18 +442,13 @@ section:first-child {
     transform: translateY(0);
     opacity: 1;
     padding-block: 0.25em;
+    gap: 1em;
 }
 
 .project-tags {
     margin-bottom: 2rem;
 }
 
-.project-annotation {
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.4;
-    letter-spacing: 0.01em;
-}
 
 
 
@@ -478,18 +456,74 @@ section:first-child {
 /********************* MEDIA QUERY *********************/
 
 @media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
     h3 {
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.4;
         letter-spacing: 0.01em;
-        margin-bottom: 0.2em;
     }
+
+    p {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+    }
+
+    p.tag {
+        font-size: 0.8rem;
+    }
+
+    figcaption {
+        font-size: 0.8rem;
+    }
+
+    .project-annotation {
+        font-size: 1.5rem;
+    }
+
+    /* SPACING */
+
 
     section {
         display: block;
-        padding: 0 0.75rem;
+        padding: 0 0.75rem 2rem;
         /* grid-template-columns: repeat(1, 1fr); */
+    }
+
+    .width-80 {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .tags {
+        margin-bottom: 2rem;
+    }
+
+    #archive {
+        gap: 2rem;
+        padding: 8rem 0.75rem 0rem 0.75rem;
+    }
+
+    .column {
+        flex-direction: column;
+        /* width: 50%; */
+    }
+
+    .column-group {
+        width: 100%;
+    }
+
+    /* MEDIA */
+    .thumbnail {
+        aspect-ratio: 3/2 !important;
+        height: auto;
+        object-fit: cover;
+
     }
 
     .landscape,
@@ -497,6 +531,9 @@ section:first-child {
     .square {
         margin-block-end: 0.5rem;
     }
+
+
+    /* MENU */
 
     .navcontainer {
         font-size: 1.5rem;
@@ -528,17 +565,6 @@ section:first-child {
 
     }
 
-    .navbar a:link {
-        /* text-decoration: none;
-        color: ; */
-    }
-
-    .navbar a:hover {
-        /* text-decoration: none;
-        color: #E6E6E6; */
-    }
-
-
     .hamicon {
         display: block;
         cursor: pointer;
@@ -548,21 +574,6 @@ section:first-child {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
     }
-
-    #archive {
-        gap: 2rem;
-        padding: 8rem 0.75rem 0rem 0.75rem;
-    }
-
-    .column {
-        flex-direction: column;
-        /* width: 50%; */
-    }
-
-    .column-group {
-        width: 100%;
-    }
-
 }
 
 
