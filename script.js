@@ -31,16 +31,16 @@ menu.onclick = () => {
 
 }
 
-var prevScrollpos = window.scrollY;
-window.onscroll = function () {
-    var currentScrollPos = window.scrollY;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navcontainer").style.top = "0";
-    } else {
-        document.getElementById("navcontainer").style.top = "-120px";
-    }
-    prevScrollpos = currentScrollPos;
-}
+// var prevScrollpos = window.scrollY;
+// window.onscroll = function () {
+//     var currentScrollPos = window.scrollY;
+//     if (prevScrollpos > currentScrollPos) {
+//         document.getElementById("navcontainer").style.top = "0";
+//     } else {
+//         document.getElementById("navcontainer").style.top = "-120px";
+//     }
+//     prevScrollpos = currentScrollPos;
+// }
 
 
 
