@@ -1,3 +1,28 @@
+// For videos
+document.addEventListener('DOMContentLoaded', function () {
+    var videos = document.getElementsByTagName('video');
+    console.log(videos.length);
+
+    if (window.innerWidth < 800) {
+        for (var i = 0; i < videos.length; i++) {
+            videos[i].setAttribute('controls', '');
+        }
+    }
+
+    window.onresize = function () {
+        if (window.innerWidth < 800) {
+            for (var i = 0; i < videos.length; i++) {
+                videos[i].setAttribute('controls', '');
+            }
+        } else {
+            for (var i = 0; i < videos.length; i++) {
+                videos[i].removeAttribute('controls');
+            }
+        }
+    }
+});
+
+
 let menu = document.querySelector('.hamicon');
 let navbar = document.querySelector('.navbar');
 
@@ -72,30 +97,4 @@ Fancybox.bind('[data-fancybox]', {
 
 });
 
-
-
-
-
-
-// Fancybox.bind('[data-fancybox="gallery-a"]' {
-//     // Custom options for the first gallery
-//     Thumbs: {
-//         showOnStart: false,
-//     },
-
-//     Toolbar: {
-//         display: {
-//             left: [],
-//             middle: [],
-//             right: ["close"],
-//         },
-//     },
-// });
-
-// Fancybox.bind('[data-fancybox="gallery-b"]', {
-//     // Custom options for the second gallery
-//     // Thumbs: {
-//     //     showOnStart: false,
-//     // },
-// });
 
