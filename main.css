@@ -24,7 +24,7 @@
 
 :root {
     --pri-color-1: #00FF0A;
-    --bg-color: #f4f4f4;
+    --bg-color: #fff;
     --fg-color: #1a1a1a;
     --grey: #808080;
 }
@@ -101,6 +101,8 @@ a:focus {
 
 .project-annotation {
     font-size: 2rem;
+    margin-bottom: 1rem;
+
 }
 
 
@@ -125,7 +127,7 @@ a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     margin: 0%;
@@ -395,13 +397,13 @@ section:first-child {
 }
 
 .landscape {
-    aspect-ratio: 3/2;
+    aspect-ratio: 16/9;
 }
 
 
 .landscape>img,
 .landscape>video {
-    aspect-ratio: 3/2;
+    aspect-ratio: 16/9;
     object-fit: cover;
     object-position: center center;
     width: 100%;
@@ -436,6 +438,7 @@ section:first-child {
 
 .project-info {
     background-color: var(--bg-color);
+    /* padding-bottom: 2rem; */
 }
 
 .project-title {
@@ -498,9 +501,14 @@ section:first-child {
         /* grid-template-columns: repeat(1, 1fr); */
     }
 
+    .project-info {
+        background-color: var(--bg-color);
+        padding-bottom: 6rem;
+    }
+
     .width-80 {
         width: 100%;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     .tags {
