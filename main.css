@@ -134,7 +134,7 @@ a:focus {
     z-index: 999;
     gap: 1.5rem;
     transition: all 1000ms ease-out;
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
 }
 
 
