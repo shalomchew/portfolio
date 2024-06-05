@@ -115,9 +115,8 @@ a:focus {
 
 .width-80 {
     width: 80%;
-    margin-bottom: 3rem;
-
 }
+
 
 
 
@@ -503,10 +502,11 @@ section:first-child {
 
     .project-info {
         background-color: var(--bg-color);
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
     }
 
     .width-80 {
+        margin-top: 2rem;
         width: 100%;
         margin-bottom: 2rem;
     }
