@@ -24,8 +24,8 @@
 
 :root {
     --pri-color-1: #00FF0A;
-    --bg-color: rgb(10, 10, 10);
-    --fg-color: rgb(230, 230, 230);
+    --fg-color: rgb(10, 10, 10);
+    --bg-color: rgb(230, 230, 230);
     --grey: #808080;
 }
 
