@@ -26,6 +26,8 @@
     --pri-color-1: #00FF0A;
     --fg-color: rgb(10, 10, 10);
     --bg-color: rgb(230, 230, 230);
+    /* --fg-color: rgb(200, 200, 200);
+    --bg-color: rgb(15, 15, 15); */
     --grey: #808080;
 }
 
@@ -197,11 +199,28 @@ a:focus {
 /********************* LAYOUT *********************/
 section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    grid-template-columns: 1fr minmax(0, 1500px) 1fr;
+    /* grid-template-columns: 1fr minmax(0, 800px) minmax(0, 800px) 1fr; */
     gap: 1rem 1rem;
-    padding: 0 2rem 4rem;
+    padding: 0 1rem 4rem;
     background-color: var(--bg-color);
 }
+
+.section-content {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1rem;
+}
+
+/* .section-left {
+    grid-column: 2;
+}
+
+.section-right {
+    grid-column: 3;
+} */
 
 #selected-works {
     gap: 4rem 1rem;
@@ -271,14 +290,14 @@ section:first-child {
     text-decoration: none;
 }
 
-#selected-works>a:hover,
+#selected-works a:hover,
 #selected-works a:focus {
     .tag {
         border: 1.5px solid var(--pri-color-1) !important;
     }
 
     .overlay {
-        opacity: 0.8;
+        opacity: 0.8 !important;
         transition: all 300ms ease-out;
     }
 }
@@ -576,8 +595,10 @@ section:first-child {
         /* bennettfeely.com */
         height: calc(100vh - 2.5rem);
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center; /* Center items horizontally */
+        flex-direction: column;
+        /* Stack items vertically */
+        justify-content: center;
+        /* Center items horizontally */
 
     }
 
@@ -585,7 +606,7 @@ section:first-child {
         padding: 0 0 2.5rem 0;
         flex-direction: column;
 
-      
+
     }
 
     .hamicon {
