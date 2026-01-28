@@ -212,7 +212,8 @@ section {
     grid-template-columns: 1fr minmax(0, 1400px) 1fr;
     /* grid-template-columns: 1fr minmax(0, 800px) minmax(0, 800px) 1fr; */
     gap: 1rem 1rem;
-    padding: 0 1rem 4rem;
+    padding: 0 1rem 0rem;
+    margin: 2rem 0 4rem;
     background-color: var(--bg-color);
 }
 
